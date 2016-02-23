@@ -128,11 +128,21 @@ else if(entry_point.equalsIgnoreCase("n")|entry_point.equalsIgnoreCase("N"))
       val ladder_pos=List((5,15),(12,20),(25,32),(40,50),(50,70),(55,75),(70,90),(18,42),(7,35),(36,72))
       
     def game_end:Boolean=
-     {
-        false
+     {  var status=false
+        players.foreach (x=>if(x.curnt_pos==100){
+          status=true
+          printf(s"Congratulations!!!,$x.name ,you have won the game .......")
+          }
+        else status=false
+        )
+        status
      }
       
+    while(!game_end){
       
+      
+      
+    }  
    }
     
   }
